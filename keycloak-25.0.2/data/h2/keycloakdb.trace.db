@@ -1,0 +1,344 @@
+2024-08-19 11:10:57.082343+09:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "MIGRATION_MODEL" not found (this database is empty); SQL statement:
+SELECT ID, VERSION FROM MIGRATION_MODEL ORDER BY UPDATE_TIME DESC [42104-224]
+2024-08-19 11:10:58.213079+09:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "DATABASECHANGELOG" not found (this database is empty); SQL statement:
+SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOG [42104-224]
+2024-08-19 11:10:58.502656+09:00 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "DATABASECHANGELOGLOCK" not found (this database is empty); SQL statement:
+SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK [42104-224]
+2024-08-19 11:10:58.534209+09:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "DATABASECHANGELOG" not found; SQL statement:
+SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOG [42102-224]
+2024-08-19 11:41:16.997498+09:00 database: CREATE CACHED TABLE "PUBLIC"."REALM"(
+    "ID" CHARACTER VARYING(36) NOT NULL,
+    "ACCESS_CODE_LIFESPAN" INTEGER,
+    "USER_ACTION_LIFESPAN" INTEGER,
+    "ACCESS_TOKEN_LIFESPAN" INTEGER,
+    "ACCOUNT_THEME" CHARACTER VARYING(255),
+    "ADMIN_THEME" CHARACTER VARYING(255),
+    "EMAIL_THEME" CHARACTER VARYING(255),
+    "ENABLED" BOOLEAN DEFAULT FALSE NOT NULL,
+    "EVENTS_ENABLED" BOOLEAN DEFAULT FALSE NOT NULL,
+    "EVENTS_EXPIRATION" BIGINT,
+    "LOGIN_THEME" CHARACTER VARYING(255),
+    "NAME" CHARACTER VARYING(255),
+    "NOT_BEFORE" INTEGER,
+    "PASSWORD_POLICY" CHARACTER VARYING(2550),
+    "REGISTRATION_ALLOWED" BOOLEAN DEFAULT FALSE NOT NULL,
+    "REMEMBER_ME" BOOLEAN DEFAULT FALSE NOT NULL,
+    "RESET_PASSWORD_ALLOWED" BOOLEAN DEFAULT FALSE NOT NULL,
+    "SOCIAL" BOOLEAN DEFAULT FALSE NOT NULL,
+    "SSL_REQUIRED" CHARACTER VARYING(255),
+    "SSO_IDLE_TIMEOUT" INTEGER,
+    "SSO_MAX_LIFESPAN" INTEGER,
+    "UPDATE_PROFILE_ON_SOC_LOGIN" BOOLEAN DEFAULT FALSE NOT NULL,
+    "VERIFY_EMAIL" BOOLEAN DEFAULT FALSE NOT NULL,
+    "MASTER_ADMIN_CLIENT" CHARACTER VARYING(36),
+    "LOGIN_LIFESPAN" INTEGER,
+    "INTERNATIONALIZATION_ENABLED" BOOLEAN DEFAULT FALSE NOT NULL,
+    "DEFAULT_LOCALE" CHARACTER VARYING(255),
+    "REG_EMAIL_AS_USERNAME" BOOLEAN DEFAULT FALSE NOT NULL,
+    "ADMIN_EVENTS_ENABLED" BOOLEAN DEFAULT FALSE NOT NULL,
+    "ADMIN_EVENTS_DETAILS_ENABLED" BOOLEAN DEFAULT FALSE NOT NULL,
+    "EDIT_USERNAME_ALLOWED" BOOLEAN DEFAULT FALSE NOT NULL,
+    "OTP_POLICY_COUNTER" INTEGER DEFAULT 0,
+    "OTP_POLICY_WINDOW" INTEGER DEFAULT 1,
+    "OTP_POLICY_PERIOD" INTEGER DEFAULT 30,
+    "OTP_POLICY_DIGITS" INTEGER DEFAULT 6,
+    "OTP_POLICY_ALG" CHARACTER VARYING(36) DEFAULT 'HmacSHA1',
+    "OTP_POLICY_TYPE" CHARACTER VARYING(36) DEFAULT 'totp',
+    "BROWSER_FLOW" CHARACTER VARYING(36),
+    "REGISTRATION_FLOW" CHARACTER VARYING(36),
+    "DIRECT_GRANT_FLOW" CHARACTER VARYING(36),
+    "RESET_CREDENTIALS_FLOW" CHARACTER VARYING(36),
+    "CLIENT_AUTH_FLOW" CHARACTER VARYING(36),
+    "OFFLINE_SESSION_IDLE_TIMEOUT" INTEGER DEFAULT 0,
+    "REVOKE_REFRESH_TOKEN" BOOLEAN DEFAULT FALSE NOT NULL,
+    "ACCESS_TOKEN_LIFE_IMPLICIT" INTEGER DEFAULT 0,
+    "LOGIN_WITH_EMAIL_ALLOWED" BOOLEAN DEFAULT TRUE NOT NULL,
+    "DUPLICATE_EMAILS_ALLOWED" BOOLEAN DEFAULT FALSE NOT NULL,
+    "DOCKER_AUTH_FLOW" CHARACTER VARYING(36),
+    "REFRESH_TOKEN_MAX_REUSE" INTEGER DEFAULT 0,
+    "ALLOW_USER_MANAGED_ACCESS" BOOLEAN DEFAULT FALSE NOT NULL,
+    "SSO_MAX_LIFESPAN_REMEMBER_ME" INTEGER DEFAULT 0 NOT NULL,
+    "SSO_IDLE_TIMEOUT_REMEMBER_ME" INTEGER DEFAULT 0 NOT NULL,
+    "DEFAULT_ROLE" CHARACTER VARYING(255)
+)
+org.h2.jdbc.JdbcSQLNonTransientException: IO Exception: "/Users/yerimlee/Desktop/vue3-keyclock-project/keycloak-25.0.2/data/h2/keycloakdb.mv.db"; SQL statement:
+CREATE CACHED TABLE "PUBLIC"."REALM"(
+    "ID" CHARACTER VARYING(36) NOT NULL,
+    "ACCESS_CODE_LIFESPAN" INTEGER,
+    "USER_ACTION_LIFESPAN" INTEGER,
+    "ACCESS_TOKEN_LIFESPAN" INTEGER,
+    "ACCOUNT_THEME" CHARACTER VARYING(255),
+    "ADMIN_THEME" CHARACTER VARYING(255),
+    "EMAIL_THEME" CHARACTER VARYING(255),
+    "ENABLED" BOOLEAN DEFAULT FALSE NOT NULL,
+    "EVENTS_ENABLED" BOOLEAN DEFAULT FALSE NOT NULL,
+    "EVENTS_EXPIRATION" BIGINT,
+    "LOGIN_THEME" CHARACTER VARYING(255),
+    "NAME" CHARACTER VARYING(255),
+    "NOT_BEFORE" INTEGER,
+    "PASSWORD_POLICY" CHARACTER VARYING(2550),
+    "REGISTRATION_ALLOWED" BOOLEAN DEFAULT FALSE NOT NULL,
+    "REMEMBER_ME" BOOLEAN DEFAULT FALSE NOT NULL,
+    "RESET_PASSWORD_ALLOWED" BOOLEAN DEFAULT FALSE NOT NULL,
+    "SOCIAL" BOOLEAN DEFAULT FALSE NOT NULL,
+    "SSL_REQUIRED" CHARACTER VARYING(255),
+    "SSO_IDLE_TIMEOUT" INTEGER,
+    "SSO_MAX_LIFESPAN" INTEGER,
+    "UPDATE_PROFILE_ON_SOC_LOGIN" BOOLEAN DEFAULT FALSE NOT NULL,
+    "VERIFY_EMAIL" BOOLEAN DEFAULT FALSE NOT NULL,
+    "MASTER_ADMIN_CLIENT" CHARACTER VARYING(36),
+    "LOGIN_LIFESPAN" INTEGER,
+    "INTERNATIONALIZATION_ENABLED" BOOLEAN DEFAULT FALSE NOT NULL,
+    "DEFAULT_LOCALE" CHARACTER VARYING(255),
+    "REG_EMAIL_AS_USERNAME" BOOLEAN DEFAULT FALSE NOT NULL,
+    "ADMIN_EVENTS_ENABLED" BOOLEAN DEFAULT FALSE NOT NULL,
+    "ADMIN_EVENTS_DETAILS_ENABLED" BOOLEAN DEFAULT FALSE NOT NULL,
+    "EDIT_USERNAME_ALLOWED" BOOLEAN DEFAULT FALSE NOT NULL,
+    "OTP_POLICY_COUNTER" INTEGER DEFAULT 0,
+    "OTP_POLICY_WINDOW" INTEGER DEFAULT 1,
+    "OTP_POLICY_PERIOD" INTEGER DEFAULT 30,
+    "OTP_POLICY_DIGITS" INTEGER DEFAULT 6,
+    "OTP_POLICY_ALG" CHARACTER VARYING(36) DEFAULT 'HmacSHA1',
+    "OTP_POLICY_TYPE" CHARACTER VARYING(36) DEFAULT 'totp',
+    "BROWSER_FLOW" CHARACTER VARYING(36),
+    "REGISTRATION_FLOW" CHARACTER VARYING(36),
+    "DIRECT_GRANT_FLOW" CHARACTER VARYING(36),
+    "RESET_CREDENTIALS_FLOW" CHARACTER VARYING(36),
+    "CLIENT_AUTH_FLOW" CHARACTER VARYING(36),
+    "OFFLINE_SESSION_IDLE_TIMEOUT" INTEGER DEFAULT 0,
+    "REVOKE_REFRESH_TOKEN" BOOLEAN DEFAULT FALSE NOT NULL,
+    "ACCESS_TOKEN_LIFE_IMPLICIT" INTEGER DEFAULT 0,
+    "LOGIN_WITH_EMAIL_ALLOWED" BOOLEAN DEFAULT TRUE NOT NULL,
+    "DUPLICATE_EMAILS_ALLOWED" BOOLEAN DEFAULT FALSE NOT NULL,
+    "DOCKER_AUTH_FLOW" CHARACTER VARYING(36),
+    "REFRESH_TOKEN_MAX_REUSE" INTEGER DEFAULT 0,
+    "ALLOW_USER_MANAGED_ACCESS" BOOLEAN DEFAULT FALSE NOT NULL,
+    "SSO_MAX_LIFESPAN_REMEMBER_ME" INTEGER DEFAULT 0 NOT NULL,
+    "SSO_IDLE_TIMEOUT_REMEMBER_ME" INTEGER DEFAULT 0 NOT NULL,
+    "DEFAULT_ROLE" CHARACTER VARYING(255)
+) [90028-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.mvstore.db.Store.convertMVStoreException(Store.java:168)
+	at org.h2.mvstore.db.Store.createTable(Store.java:220)
+	at org.h2.schema.Schema.createTable(Schema.java:797)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:112)
+	at org.h2.engine.MetaRecord.prepareAndExecute(MetaRecord.java:77)
+	at org.h2.engine.Database.executeMeta(Database.java:666)
+	at org.h2.engine.Database.executeMeta(Database.java:638)
+	at org.h2.engine.Database.<init>(Database.java:359)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:343)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:125)
+	at org.h2.Driver.connect(Driver.java:59)
+	at io.agroal.pool.ConnectionFactory.createConnection(ConnectionFactory.java:225)
+	at io.agroal.pool.ConnectionPool$CreateConnectionTask.call(ConnectionPool.java:545)
+	at io.agroal.pool.ConnectionPool$CreateConnectionTask.call(ConnectionPool.java:526)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at io.agroal.pool.util.PriorityScheduledExecutor.beforeExecute(PriorityScheduledExecutor.java:75)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: org.h2.mvstore.MVStoreException: Reading from file sun.nio.ch.FileChannelImpl@3c7f044e failed at 557643 (length -1), read 0, remaining 512 [2.2.224/1]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.DataUtils.readFully(DataUtils.java:455)
+	at org.h2.mvstore.FileStore.readFully(FileStore.java:719)
+	at org.h2.mvstore.SingleFileStore.readFully(SingleFileStore.java:60)
+	at org.h2.mvstore.SingleFileStore.readFully(SingleFileStore.java:28)
+	at org.h2.mvstore.SFChunk.readFully(SFChunk.java:35)
+	at org.h2.mvstore.Chunk.readBufferForPage(Chunk.java:465)
+	at org.h2.mvstore.FileStore.readPage(FileStore.java:1960)
+	at org.h2.mvstore.MVStore.readPage(MVStore.java:1021)
+	at org.h2.mvstore.MVMap.readPage(MVMap.java:632)
+	at org.h2.mvstore.MVMap.readOrCreateRootPage(MVMap.java:657)
+	at org.h2.mvstore.MVMap.setRootPos(MVMap.java:642)
+	at org.h2.mvstore.MVStore.openMap(MVStore.java:479)
+	at org.h2.mvstore.MVStore.openMap(MVStore.java:426)
+	at org.h2.mvstore.tx.TransactionStore.openMap(TransactionStore.java:564)
+	at org.h2.mvstore.tx.TransactionStore.openVersionedMap(TransactionStore.java:550)
+	at org.h2.mvstore.tx.Transaction.openMap(Transaction.java:456)
+	at org.h2.mvstore.db.MVPrimaryIndex.<init>(MVPrimaryIndex.java:53)
+	at org.h2.mvstore.db.MVTable.<init>(MVTable.java:156)
+	at org.h2.mvstore.db.Store.createTable(Store.java:216)
+	... 20 more
+Caused by: java.nio.channels.ClosedByInterruptException
+	at java.base/java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:199)
+	at java.base/sun.nio.ch.FileChannelImpl.endBlocking(FileChannelImpl.java:171)
+	at java.base/sun.nio.ch.FileChannelImpl.readInternal(FileChannelImpl.java:844)
+	at java.base/sun.nio.ch.FileChannelImpl.read(FileChannelImpl.java:824)
+	at org.h2.mvstore.DataUtils.readFully(DataUtils.java:441)
+	... 38 more
+2024-08-19 11:41:17.091038+09:00 database: opening /Users/yerimlee/Desktop/vue3-keyclock-project/keycloak-25.0.2/data/h2/keycloakdb
+org.h2.message.DbException: IO Exception: "/Users/yerimlee/Desktop/vue3-keyclock-project/keycloak-25.0.2/data/h2/keycloakdb.mv.db" [90028-224]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.mvstore.db.Store.convertMVStoreException(Store.java:168)
+	at org.h2.mvstore.db.Store.createTable(Store.java:220)
+	at org.h2.schema.Schema.createTable(Schema.java:797)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:112)
+	at org.h2.engine.MetaRecord.prepareAndExecute(MetaRecord.java:77)
+	at org.h2.engine.Database.executeMeta(Database.java:666)
+	at org.h2.engine.Database.executeMeta(Database.java:638)
+	at org.h2.engine.Database.<init>(Database.java:359)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:343)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:125)
+	at org.h2.Driver.connect(Driver.java:59)
+	at io.agroal.pool.ConnectionFactory.createConnection(ConnectionFactory.java:225)
+	at io.agroal.pool.ConnectionPool$CreateConnectionTask.call(ConnectionPool.java:545)
+	at io.agroal.pool.ConnectionPool$CreateConnectionTask.call(ConnectionPool.java:526)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at io.agroal.pool.util.PriorityScheduledExecutor.beforeExecute(PriorityScheduledExecutor.java:75)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: IO Exception: "/Users/yerimlee/Desktop/vue3-keyclock-project/keycloak-25.0.2/data/h2/keycloakdb.mv.db"; SQL statement:
+CREATE CACHED TABLE "PUBLIC"."REALM"(
+    "ID" CHARACTER VARYING(36) NOT NULL,
+    "ACCESS_CODE_LIFESPAN" INTEGER,
+    "USER_ACTION_LIFESPAN" INTEGER,
+    "ACCESS_TOKEN_LIFESPAN" INTEGER,
+    "ACCOUNT_THEME" CHARACTER VARYING(255),
+    "ADMIN_THEME" CHARACTER VARYING(255),
+    "EMAIL_THEME" CHARACTER VARYING(255),
+    "ENABLED" BOOLEAN DEFAULT FALSE NOT NULL,
+    "EVENTS_ENABLED" BOOLEAN DEFAULT FALSE NOT NULL,
+    "EVENTS_EXPIRATION" BIGINT,
+    "LOGIN_THEME" CHARACTER VARYING(255),
+    "NAME" CHARACTER VARYING(255),
+    "NOT_BEFORE" INTEGER,
+    "PASSWORD_POLICY" CHARACTER VARYING(2550),
+    "REGISTRATION_ALLOWED" BOOLEAN DEFAULT FALSE NOT NULL,
+    "REMEMBER_ME" BOOLEAN DEFAULT FALSE NOT NULL,
+    "RESET_PASSWORD_ALLOWED" BOOLEAN DEFAULT FALSE NOT NULL,
+    "SOCIAL" BOOLEAN DEFAULT FALSE NOT NULL,
+    "SSL_REQUIRED" CHARACTER VARYING(255),
+    "SSO_IDLE_TIMEOUT" INTEGER,
+    "SSO_MAX_LIFESPAN" INTEGER,
+    "UPDATE_PROFILE_ON_SOC_LOGIN" BOOLEAN DEFAULT FALSE NOT NULL,
+    "VERIFY_EMAIL" BOOLEAN DEFAULT FALSE NOT NULL,
+    "MASTER_ADMIN_CLIENT" CHARACTER VARYING(36),
+    "LOGIN_LIFESPAN" INTEGER,
+    "INTERNATIONALIZATION_ENABLED" BOOLEAN DEFAULT FALSE NOT NULL,
+    "DEFAULT_LOCALE" CHARACTER VARYING(255),
+    "REG_EMAIL_AS_USERNAME" BOOLEAN DEFAULT FALSE NOT NULL,
+    "ADMIN_EVENTS_ENABLED" BOOLEAN DEFAULT FALSE NOT NULL,
+    "ADMIN_EVENTS_DETAILS_ENABLED" BOOLEAN DEFAULT FALSE NOT NULL,
+    "EDIT_USERNAME_ALLOWED" BOOLEAN DEFAULT FALSE NOT NULL,
+    "OTP_POLICY_COUNTER" INTEGER DEFAULT 0,
+    "OTP_POLICY_WINDOW" INTEGER DEFAULT 1,
+    "OTP_POLICY_PERIOD" INTEGER DEFAULT 30,
+    "OTP_POLICY_DIGITS" INTEGER DEFAULT 6,
+    "OTP_POLICY_ALG" CHARACTER VARYING(36) DEFAULT 'HmacSHA1',
+    "OTP_POLICY_TYPE" CHARACTER VARYING(36) DEFAULT 'totp',
+    "BROWSER_FLOW" CHARACTER VARYING(36),
+    "REGISTRATION_FLOW" CHARACTER VARYING(36),
+    "DIRECT_GRANT_FLOW" CHARACTER VARYING(36),
+    "RESET_CREDENTIALS_FLOW" CHARACTER VARYING(36),
+    "CLIENT_AUTH_FLOW" CHARACTER VARYING(36),
+    "OFFLINE_SESSION_IDLE_TIMEOUT" INTEGER DEFAULT 0,
+    "REVOKE_REFRESH_TOKEN" BOOLEAN DEFAULT FALSE NOT NULL,
+    "ACCESS_TOKEN_LIFE_IMPLICIT" INTEGER DEFAULT 0,
+    "LOGIN_WITH_EMAIL_ALLOWED" BOOLEAN DEFAULT TRUE NOT NULL,
+    "DUPLICATE_EMAILS_ALLOWED" BOOLEAN DEFAULT FALSE NOT NULL,
+    "DOCKER_AUTH_FLOW" CHARACTER VARYING(36),
+    "REFRESH_TOKEN_MAX_REUSE" INTEGER DEFAULT 0,
+    "ALLOW_USER_MANAGED_ACCESS" BOOLEAN DEFAULT FALSE NOT NULL,
+    "SSO_MAX_LIFESPAN_REMEMBER_ME" INTEGER DEFAULT 0 NOT NULL,
+    "SSO_IDLE_TIMEOUT_REMEMBER_ME" INTEGER DEFAULT 0 NOT NULL,
+    "DEFAULT_ROLE" CHARACTER VARYING(255)
+) [90028-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 23 more
+Caused by: org.h2.mvstore.MVStoreException: Reading from file sun.nio.ch.FileChannelImpl@3c7f044e failed at 557643 (length -1), read 0, remaining 512 [2.2.224/1]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.DataUtils.readFully(DataUtils.java:455)
+	at org.h2.mvstore.FileStore.readFully(FileStore.java:719)
+	at org.h2.mvstore.SingleFileStore.readFully(SingleFileStore.java:60)
+	at org.h2.mvstore.SingleFileStore.readFully(SingleFileStore.java:28)
+	at org.h2.mvstore.SFChunk.readFully(SFChunk.java:35)
+	at org.h2.mvstore.Chunk.readBufferForPage(Chunk.java:465)
+	at org.h2.mvstore.FileStore.readPage(FileStore.java:1960)
+	at org.h2.mvstore.MVStore.readPage(MVStore.java:1021)
+	at org.h2.mvstore.MVMap.readPage(MVMap.java:632)
+	at org.h2.mvstore.MVMap.readOrCreateRootPage(MVMap.java:657)
+	at org.h2.mvstore.MVMap.setRootPos(MVMap.java:642)
+	at org.h2.mvstore.MVStore.openMap(MVStore.java:479)
+	at org.h2.mvstore.MVStore.openMap(MVStore.java:426)
+	at org.h2.mvstore.tx.TransactionStore.openMap(TransactionStore.java:564)
+	at org.h2.mvstore.tx.TransactionStore.openVersionedMap(TransactionStore.java:550)
+	at org.h2.mvstore.tx.Transaction.openMap(Transaction.java:456)
+	at org.h2.mvstore.db.MVPrimaryIndex.<init>(MVPrimaryIndex.java:53)
+	at org.h2.mvstore.db.MVTable.<init>(MVTable.java:156)
+	at org.h2.mvstore.db.Store.createTable(Store.java:216)
+	... 20 more
+Caused by: java.nio.channels.ClosedByInterruptException
+	at java.base/java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:199)
+	at java.base/sun.nio.ch.FileChannelImpl.endBlocking(FileChannelImpl.java:171)
+	at java.base/sun.nio.ch.FileChannelImpl.readInternal(FileChannelImpl.java:844)
+	at java.base/sun.nio.ch.FileChannelImpl.read(FileChannelImpl.java:824)
+	at org.h2.mvstore.DataUtils.readFully(DataUtils.java:441)
+	... 38 more
+2024-08-19 11:41:17.226135+09:00 database: flush
+org.h2.message.DbException: General error: "org.h2.mvstore.MVStoreException: Writing to sun.nio.ch.FileChannelImpl@3c7f044e failed; length 8192 at 720896 [2.2.224/2]" [50000-224]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:407)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:122)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:1546)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:371)
+	at org.h2.mvstore.FileStore.storeBuffer(FileStore.java:1527)
+	at org.h2.mvstore.FileStore.lambda$serializeAndStore$3(FileStore.java:1432)
+	at org.h2.mvstore.FileStore.submitOrRun(FileStore.java:1401)
+	at org.h2.mvstore.FileStore.serializeAndStore(FileStore.java:1432)
+	at org.h2.mvstore.FileStore.lambda$storeIt$2(FileStore.java:1376)
+	at org.h2.mvstore.FileStore.submitOrRun(FileStore.java:1401)
+	at org.h2.mvstore.FileStore.storeIt(FileStore.java:1375)
+	at org.h2.mvstore.MVStore.storeNow(MVStore.java:843)
+	at org.h2.mvstore.MVStore.store(MVStore.java:808)
+	at org.h2.mvstore.MVStore.commit(MVStore.java:778)
+	at org.h2.mvstore.MVStore.commit(MVStore.java:770)
+	at org.h2.mvstore.tx.TransactionStore.close(TransactionStore.java:365)
+	at org.h2.mvstore.db.Store.close(Store.java:349)
+	at org.h2.engine.Database.closeOpenFilesAndUnlock(Database.java:1293)
+	at org.h2.engine.Database.<init>(Database.java:401)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:343)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:125)
+	at org.h2.Driver.connect(Driver.java:59)
+	at io.agroal.pool.ConnectionFactory.createConnection(ConnectionFactory.java:225)
+	at io.agroal.pool.ConnectionPool$CreateConnectionTask.call(ConnectionPool.java:545)
+	at io.agroal.pool.ConnectionPool$CreateConnectionTask.call(ConnectionPool.java:526)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at io.agroal.pool.util.PriorityScheduledExecutor.beforeExecute(PriorityScheduledExecutor.java:75)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "org.h2.mvstore.MVStoreException: Writing to sun.nio.ch.FileChannelImpl@3c7f044e failed; length 8192 at 720896 [2.2.224/2]" [50000-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 34 more
+Caused by: org.h2.mvstore.MVStoreException: Writing to sun.nio.ch.FileChannelImpl@3c7f044e failed; length 8192 at 720896 [2.2.224/2]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.DataUtils.writeFully(DataUtils.java:478)
+	at org.h2.mvstore.SingleFileStore.writeFully(SingleFileStore.java:67)
+	at org.h2.mvstore.SingleFileStore.writeFully(SingleFileStore.java:28)
+	at org.h2.mvstore.RandomAccessStore.writeChunk(RandomAccessStore.java:366)
+	at org.h2.mvstore.RandomAccessStore.writeChunk(RandomAccessStore.java:28)
+	at org.h2.mvstore.FileStore.storeBuffer(FileStore.java:1524)
+	... 28 more
+Caused by: java.nio.channels.ClosedChannelException
+	at java.base/sun.nio.ch.FileChannelImpl.ensureOpen(FileChannelImpl.java:159)
+	at java.base/sun.nio.ch.FileChannelImpl.write(FileChannelImpl.java:854)
+	at org.h2.mvstore.DataUtils.writeFully(DataUtils.java:474)
+	... 33 more
